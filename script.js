@@ -2,7 +2,7 @@
 
 function lengths(arr) {
    var wordLength = []
-   var arr = ["this", "is", "a", "silly", "monkey"]
+   var arr = ["hello", "what", "is", "up", "dude"]
    for (var i = 0; i < arr.length; i++) {
    wordLength.push(arr[i].length)
   }
@@ -66,25 +66,21 @@ console.log(maxOfThreeNumbers(50,40,20));
 
 //SHORT QUESTION 3
 
-function isCharacterAVowel(x){
-var answer = "";
-  switch(x) {
+function isCharacterAVowel(x) {
+   if (x == "A" || x == "E" || x == "I" || x == "O" || x == "U")
+   {return ("True");}
 
-    case "A":
-    case "E":
-    case "I":
-    case "O":
-    case "U":
-       answer = "True";
-       break;
+   else if (x.length >= 2)
+   {return ("That string is not a letter");}
 
-    default:
-        answer = "False";
-       break;
-   }
+   else if (typeof x == 'number')
+   {return ("That is not a string");}
 
-return answer
+//    else if ( x !== NaN)
+//    {return ("That is not a string");}
 
+   else
+   {return ("False");}
 }
 
 console.log(isCharacterAVowel("A"))
